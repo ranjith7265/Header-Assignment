@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+header {
+    background-color:rgb(255, 208, 0);
+    height: 10vh;
+    padding: 1rem;
+}
+#hero{
+    min-height: 90vh;
+    width: 100%;
+    background-image: url(./banner1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+nav button{
+    border: none;
+    padding: 1rem 2rem;
+    margin-right: 1.5rem;
+    border-radius: 2rem;
+
+}
+nav h1{
+    width: 20%;
+    color: #fff;
+    font-size: 3.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 2rem;
+}
+nav ul {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    float: left;
+    position: relative;
+}
+
+.menu a {
+    color: #fff;
+    display: block;
+    font-size: 1.6rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    line-height: 4rem;
+    text-decoration: none;
+    text-align: center;
+    padding: 0 1rem;
+}
+.submenu a{
+    width: 12rem;
+    color: black;
+}
+.submenu a:hover{
+    background-color: #ebe7e7;
+    border-radius: 5px;
+}
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 3.7rem;
+    left: 0;
+    background-color: #ffffff;
+    width: 12rem;
+    border-radius: 5px;
+}
+
+nav ul li:hover>ul {
+    display: inherit;
+}
+
+@media only screen and (max-width: 768px) {
+    nav li {
+        float: none;
+    }
+
+    nav ul ul {
+        position: static;
+        display: none;
+    }
+
+    nav ul li:hover>ul {
+        display: none;
+    }
+
+    nav ul li a:hover+ul {
+        display: block;
+        position: static;
+        background-color: #333;
+        width: 100%;
+    }
+}
